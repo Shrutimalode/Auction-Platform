@@ -1,0 +1,29 @@
+<form id="bidForm">
+    <label for="bidAmount">Enter Bid Amount:</label>
+    <input type="number" id="bidAmount" name="bidAmount" required>
+    <button type="submit">Place Bid</button>
+  </form>
+  
+  <div id="result"></div>
+  
+  <script>
+  document.getElementById('bidForm').addEventListener('submit', function(e) {
+      e.preventDefault();  // Prevent form from submitting the default way
+      
+      const bidAmount = document.getElementById('bidAmount').value;
+  
+      // Send the bid amount to the server to check against the customer balance
+      fetch('/checkBalance', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ bidAmount: bidAmount })
+      })
+      .then(response => response.json())
+      .then(data => {
+          document.getElementById('result').innerText = data.message;
+      });
+  });
+
+
+  </script>
+  

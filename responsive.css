@@ -1,0 +1,99 @@
+/* General Reset */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1200px) {
+    .login-form-box, .login-info-box {
+        max-width: 500px;
+        padding: 40px;
+    }
+    .login-form-box h2 {
+        font-size: 2rem;
+    }
+    .info-text-box p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablets (Medium Screens) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .login-container {
+        flex-wrap: nowrap;
+        padding: 20px;
+    }
+    .login-form-box, .login-info-box {
+        max-width: 400px;
+        padding: 25px;
+    }
+    .login-form-box h2 {
+        font-size: 1.8rem;
+    }
+    .login-form-box input {
+        font-size: 0.9rem;
+    }
+    .login-form-box .btn-login {
+        font-size: 1rem;
+        padding: 12px;
+    }
+    .info-text-box {
+        padding: 20px;
+    }
+    .info-text-box p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Phones (Small Screens) */
+@media (max-width: 767px) {
+    .login-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .login-form-box, .login-info-box {
+        width: 100%; /* Full width for small screens */
+        max-width: 350px;
+        padding: 15px; /* Reduce padding */
+        border-radius: 10px;
+    }
+
+    .login-form-box {
+        height: auto; /* Auto height to fit content */
+    }
+
+    .login-form-box h2 {
+        font-size: 1.5rem; /* Smaller heading */
+        margin-bottom: 15px;
+    }
+
+    .login-form-box input {
+        font-size: 0.8rem; /* Smaller input text */
+        padding: 8px;
+        margin: 5px 0;
+    }
+
+    .login-form-box .btn-login {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .info-text-box {
+        padding: 15px;
+        font-size: 0.8rem;
+        line-height: 1.3;
+    }
+
+    .info-text-box p {
+        font-size: 0.7rem; /* Reduce font size further */
+        line-height: 1.2;
+    }
+
+    footer p {
+        font-size: 0.6rem; /* Smaller footer text */
+    }
+}
